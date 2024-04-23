@@ -1,0 +1,137 @@
+:root {
+  --space-cadet: #1b1b3a;
+  --finn: #693668;
+  --magenta-haze: #a74482;
+  --brilliant-rose: #f84aa7;
+  --folly: #ff3562;
+}
+
+/* ----Estilos del Menú---- */
+.menuSection {
+  background-color: var(--brilliant-rose);
+  min-width: 90vw;
+  min-height: 100vh;
+  color: var(--space-cadet);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.menuSection__contain {
+  background-color: var(--space-cadet);
+  color: #fff;
+  height: 50vh;
+  border-radius: 1vh;
+  padding: 2vh;
+
+  box-shadow: 0px 0px 50px #000;
+}
+
+.menuSection__contain--form {
+  font-size: 6vw;
+  width: 100%;
+  height: 32vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.menuSection__contain--form input {
+  width: 100%;
+  height: 3.5vh;
+  border-radius: 10vw;
+
+  padding: 0vh 1vw;
+  font-size: 6vw;
+}
+.menuSection__contain--form input:focus {
+  padding: 0vh 1vw;
+  font-size: 6vw;
+}
+
+.menuSection__contain--form button {
+  width: 30vw;
+  height: 6vh;
+  font-size: 8vw;
+  font-weight: 700;
+
+  border-radius: 6vw;
+}
+.menuSection__contain--form button:hover {
+  background-color: var(--folly);
+  color: #fff;
+  box-shadow: 4px 7px #333;
+  transition: 1s;
+}
+
+/* ------Estilos del Juego------- */
+.gameSection {
+  background-color: var(--space-cadet);
+  min-width: 100vw;
+  min-height: 92vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.gameSection h2 {
+  color: #fff;
+  font-size: 7vw;
+}
+.h2-turn {
+  background-color: var(--brilliant-rose);
+  box-shadow: 0 5px 20px var(--finn);
+}
+
+.gameSection__ticTacToe {
+  background-color: var(--brilliant-rose);
+  min-width: 89vw;
+  min-height: 54.5vh;
+  border: 1px dotted var(--brilliant-rose);
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2vw;
+}
+
+.gameSection__ticTacToe--square {
+  background-color: var(--space-cadet);
+  color: #fff;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gameSection__ticTacToe--square--markedO {
+  background-color: #fff;
+  width: 40%;
+  height: 35%;
+  border-radius: 100%;
+}
+.gameSection__ticTacToe--square--markedX {
+  background-color: #fff;
+  width: 40%;
+  height: 35%;
+  clip-path: polygon(
+    20% 0%,
+    0% 20%,
+    30% 50%,
+    0% 80%,
+    20% 100%,
+    50% 70%,
+    80% 100%,
+    100% 80%,
+    70% 50%,
+    100% 20%,
+    80% 0%,
+    50% 30%
+  );
+}
